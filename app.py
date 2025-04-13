@@ -12,91 +12,69 @@ st.set_page_config(
 st.markdown(
     """
     <style>
-    /* Set a clean, neutral background */
-    body {
-        background-color: #F8F8F8 !important;
-    }
-    
-    .stApp {
-        background-color: #F8F8F8;
-        color: #333 !important;
-    }
+        /* Full viewport height and margin reset */
+        body {
+            background-color: #FFC5D3 !important;
+            margin: 0;
+            padding: 0;
+            height: 100vh; /* Full height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden; /* Prevent unnecessary scroll */
+        }
 
-    /* Main container styling */
-    .main-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-    }
+        /* Centering content vertically and horizontally */
+        .stApp {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%; /* Full height */
+            width: 100%; /* Full width */
+            color: #000000 !important; /* Black text */
+        }
 
-    .card {
-        background-color: #ffffff;
-        padding: 40px;
-        border-radius: 12px;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        width: 100%;
-        max-width: 650px;
-    }
+        /* Adjusting the size of input boxes and select dropdowns */
+        .stSelectbox, .stTextInput, .stNumberInput {
+            margin: 10px 0;
+            width: 100%;
+            max-width: 500px; /* Limiting max width for better alignment */
+        }
 
-    /* Title styling */
-    .stTitle {
-        font-size: 36px;
-        font-weight: 600;
-        color: #2c3e50;
-    }
+        /* Button Styling */
+        .stButton button {
+            background: linear-gradient(145deg, #FF69B4, #FF4786) !important; /* Gradient pink color */
+            color: white !important;
+            border-radius: 12px;
+            font-size: 18px;
+            padding: 12px 30px;
+            border: none;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+        }
 
-    /* Subtitle for description */
-    .stSubtitle {
-        font-size: 18px;
-        color: #7f8c8d;
-        margin-bottom: 20px;
-        font-weight: 400;
-    }
+        .stButton button:hover {
+            background: linear-gradient(145deg, #FF4786, #FF69B4) !important; /* Lighter pink on hover */
+            transform: translateY(-3px); /* Slight button lift on hover */
+            box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.2);
+        }
 
-    /* Button styling */
-    .stButton button {
-        background-color: #2980b9 !important;
-        color: white !important;
-        border-radius: 8px;
-        font-size: 18px;
-        padding: 12px 0;
-        width: 100%;
-        font-weight: 500;
-        transition: background-color 0.3s ease;
-    }
+        /* Label Styling for input fields */
+        .stSelectbox label, .stTextInput label, .stNumberInput label {
+            font-size: 16px;
+            font-weight: bold;
+            color: #000000 !important;
+        }
 
-    .stButton button:hover {
-        background-color: #3498db !important;
-    }
-
-    /* Input fields styling */
-    .stTextInput input, .stNumberInput input, .stSelectbox select {
-        background-color: #f1f1f1 !important;
-        color: #2c3e50 !important;
-        border-radius: 8px;
-        font-size: 16px;
-        padding: 12px;
-        width: 100%;
-    }
-
-    .stTextInput label, .stNumberInput label, .stSelectbox label {
-        font-size: 14px;
-        color: #2980b9 !important;
-    }
-
-    /* Success message styling */
-    .stSuccess {
-        background-color: #e6f7ff !important;
-        color: #3498db !important;
-        padding: 12px;
-        border-radius: 8px;
-        font-weight: 500;
-    }
     </style>
     """,
     unsafe_allow_html=True
 )
+
+
+
+
 
 # Title and Description
 st.markdown("<div class='main-container'>", unsafe_allow_html=True)
